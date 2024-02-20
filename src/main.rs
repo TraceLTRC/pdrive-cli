@@ -192,6 +192,7 @@ async fn multipart_upload(
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
     // TODO: Add flag for quite mode
+    // TODO: Quit if config doesn't exist
     let args = Cli::parse();
     let config: Config = confy::load("pdrive", None)?;
 
